@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr;
+  background-image: url('../assets/hc_bg.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center 0vh;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.header {
+  display: grid;
+  font-family: 'Montserrat', sans-serif;
+  color: #00a1dd;
+  text-align: center;
+  text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  margin-bottom: 2rem;
+}
+
+.header img {
+  height: 25vh;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+} .header h2 {
+  font-size: 1.8rem;
+}
+
+.ambr3 {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: absolute;
+  top:30px;left:0;
+  border-radius: 0 10px 10px 0;
+  background-color: #ff9a4055;
+  height: 60px;
+  padding: .4rem 2rem .2rem;
+  cursor: pointer;
+}
+
+.ambr3 img {
+  height: 100%;
+  margin: auto;
+}
+
+.ambr3 p {
+  font-family: 'Montserrat', sans-serif;
+  padding: .1rem 0;
+  font-weight: bolder;
+  color: #43009a;
+}
+
+.error {
+  position: absolute;
+  background-color: #f00c;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+  top:0;
+  left: 50vw;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-100%);
+  animation: slide-down ease-out forwards 500ms;
+  width: 60vw;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform ease-out 500ms;
+}
+
+.error span {
+  cursor: pointer;
+}
+
+#back-button-global {
+  position: absolute;
+  background-color: #0000;
+  border: 2px solid #ff0;
+  color: #ff0;
+  font-family: 'Montserrat', sans-serif;
+  padding: .5rem 1.5rem;
+  margin: auto;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%);
+  } 100% {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width:800px) {
+  .ambr3 {
+    width: 100vw;
+    border-radius: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width:400px) {
+  .ambr3 {
+    top: 0;
+  }
+}

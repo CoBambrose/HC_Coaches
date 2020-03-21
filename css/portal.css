@@ -1,0 +1,53 @@
+.content {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.content button {
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 0;
+  background-color: #2cc6ff;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content button:hover {
+  opacity: .9;
+}
+
+@media (max-width:880px) {
+  .content {
+    grid-template-columns: repeat(2, auto);
+  } .content button:last-child {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width:530px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+  } .content button:last-child {
+    grid-column: 1 / 2;
+  } .content button {
+    width: 90%;
+  }
+}
+
+
+@media (max-width:380px) {
+  .content button {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
