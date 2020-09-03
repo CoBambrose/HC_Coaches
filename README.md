@@ -9,7 +9,7 @@ A cross-platform _web-app_ designed for the use of students, college staff, coac
 Made by __Cobain Ambrose__:
 \tThe Programmer and Director behind __Ambr3 Ltd__
 
-Ambr3's Website: [Ambr3]{http://ambr3.com}
+Ambr3's Website: [Ambr3](http://ambr3.com)
 
 ## Collaborators
 
